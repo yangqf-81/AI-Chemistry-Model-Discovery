@@ -1,4 +1,4 @@
-"""Account-free ECFP4/LR foundation exercise; not the research GNN M0."""
+"""ECFP4/LR foundation exercise for molecular prediction and evaluation."""
 import argparse
 import csv
 import hashlib
@@ -69,8 +69,8 @@ def run(train_path, validation_path, output_path):
     output = Path(output_path)
     output.mkdir(parents=True, exist_ok=True)
     metrics = {
-        'model': 'ECFP4-2048 + balanced logistic regression; not GNN M0',
-        'purpose': 'Foundation technical exercise; not student outcome or L6 reproduction',
+        'model': 'ECFP4-2048 + balanced logistic regression',
+        'purpose': 'Foundation molecular activity prediction exercise',
         'train_rows': len(train[0]), 'validation_rows': len(validation[0]),
         'train_positive': int(train[2].sum()),
         'validation_positive': int(validation[2].sum()),

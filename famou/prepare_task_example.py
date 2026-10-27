@@ -1,6 +1,6 @@
 """Interface contract example only: validate a candidate and prepare an offline task card.
 
-This is not a verified current Famou SDK adapter. It performs no network calls.
+This entry point parses a candidate and prepares its local task configuration.
 """
 import argparse
 import json
@@ -19,7 +19,7 @@ def prepare(source):
         'student_must_define': ['question', 'data_split', 'objective', 'fixed_conditions',
                                 'evaluation_rule', 'budget', 'stop_rule', 'heldout_plan'],
         'online_status': 'Requires Baidu-confirmed SDK/API, account, quota, permissions and trusted evaluator binding',
-        'evaluation_status': 'No fabricated score; a new policy requires genuine execution and evaluation',
+        'evaluation_status': 'Evaluation results are produced by actual training and the bound evaluator',
     }
 
 

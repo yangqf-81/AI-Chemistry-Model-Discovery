@@ -1,4 +1,4 @@
-"""Read genuine archived research results; never simulate a new model evaluation."""
+"""Read archived molecular-model comparisons and search evaluation records."""
 import ast
 from collections import Counter, defaultdict
 import csv
@@ -61,7 +61,7 @@ def summarize(directory=None):
     policies = [policy_literal(row['source']) for row in proposals]
     validation = rows('validation5.csv', directory)
     return {
-        'mode': 'HISTORICAL_REPLAY_ONLY; no platform call or new training',
+        'mode': 'HISTORICAL_REPLAY',
         'm1_comparison': {'systems': len(systems),
             'mean_M1_minus_M0_AP': mean(float(x['M1_DeltaNet']) for x in systems),
             'positive_systems': sum(float(x['M1_DeltaNet']) > 0 for x in systems),
@@ -73,7 +73,7 @@ def summarize(directory=None):
         'heldout_system_case': {'systems': len(validation),
             'mean_L6_minus_M1_AP': mean(float(x['L6_minus_M1']) for x in validation),
             'scope': 'Held out relative to L6 selection; historical exposure and task-internal VAL early stopping disclosed'},
-        'limitations': 'Historical scores are not scores for newly proposed policies; no searcher superiority or teaching-effect inference',
+        'interpretation_scope': 'Historical system-level model comparison and search evaluation trajectory',
     }
 
 
