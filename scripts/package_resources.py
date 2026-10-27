@@ -40,6 +40,8 @@ for relative in [
     'outputs/baseline/metrics.json', 'outputs/baseline/predictions.csv',
     'outputs/notebook-verification.json', 'outputs/learning-notebook-verification.json']:
     payload['AI-Chemistry-Model-Discovery/'+relative] = (REPO/relative).read_bytes()
+for path in sorted((REPO/'outputs').glob('0[0-4]_*.executed.ipynb')):
+    payload['AI-Chemistry-Model-Discovery/outputs/'+path.name] = path.read_bytes()
 
 payload['申报材料/教学资源信息表.md'] = (PROJECT/'申报材料/教学资源信息表_内容初稿.md').read_bytes()
 payload['校企合作说明.md'] = (REPO/'docs/cooperation.md').read_bytes()
