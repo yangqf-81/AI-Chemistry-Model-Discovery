@@ -1,0 +1,10 @@
+name: ai-chemistry-practice
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - rdkit=2024.03.2
+  - numpy=1.26.4
+  - scipy=1.15.2
+  - scikit-learn=1.6.1
+  - pip
