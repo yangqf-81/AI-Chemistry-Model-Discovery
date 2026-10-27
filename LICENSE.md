@@ -1,13 +1,18 @@
 # 许可与权利范围
 
-## 原创代码与教学材料
+除另有来源或许可标注的第三方内容外，本仓库原创内容按以下范围授权：
 
-原创代码、教学文档、图谱和模板的版权归相应权利人所有。目前尚未授予统一的开源许可；复制、改编和再分发这些内容，请先联系仓库维护者确认授权范围。
+| 内容 | 许可 |
+|---|---|
+| src/、famou/、scripts/、tests/中的原创代码，Notebook代码单元及原创运行配置 | [MIT License](licenses/MIT.md) |
+| 原创说明与教学文档（包括各目录README）、图谱及可编辑源、教学模板、Notebook教学文字 | [CC BY 4.0](licenses/CC-BY-4.0.md) |
 
-## 公开示例数据
+Copyright © 2026 AI-Chemistry-Model-Discovery contributors.
 
-`data/example/`选自PubChem公开实验记录，来源与处理记录见其中的`source_manifest.json`。这些数据按原始来源条款使用，参见[NCBI数据使用政策](https://www.ncbi.nlm.nih.gov/home/about/policies/)。本仓库不将第三方数据作为团队原创内容重新授权。
+## 公开示例数据与结果
+
+`data/example/`中的分子结构与活性记录来自PubChem，来源与处理记录见其中的`source_manifest.json`；按原始来源条款使用，参见[NCBI数据使用政策](https://www.ncbi.nlm.nih.gov/home/about/policies/)。`examples/public_baseline/`中的指标与预测为该公开样本的实际运行输出，使用时保留数据来源与运行条件说明。第三方数据不纳入团队对原创内容授予的MIT或CC BY 4.0许可。
 
 ## 第三方软件与服务
 
-RDKit、NumPy、SciPy、scikit-learn及Jupyter组件遵循各自的软件许可。百度伐谋平台、接口和计算服务遵循其服务条款，仓库内的教学示例不授予平台使用权限。
+RDKit、NumPy、SciPy、scikit-learn及Jupyter组件遵循各自的软件许可。百度伐谋平台、接口和计算服务遵循其服务条款；本仓库的授权范围为原创教学内容和代码。

@@ -63,4 +63,4 @@ Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使�
 
 ## 许可
 
-原创内容的授权状态及第三方数据、依赖与平台服务的权利范围见[许可说明](LICENSE.md)。
+原创代码采用[MIT License](licenses/MIT.md)，原创教学文档、图谱与模板采用[CC BY 4.0](licenses/CC-BY-4.0.md)。公开数据、第三方依赖和百度平台服务分别遵循原有条款，适用范围见[许可说明](LICENSE.md)。
