@@ -39,20 +39,20 @@
 
 00提供无需伐谋账号的基础模型运行；02—04中的模型比较和搜索结果为真实科研案例分析。伐谋在线实践依课程实际账号、额度和接口安排开展，实验记录分别注明执行和资料来源。
 
-## 在本地开始运行
+## 使用配套教学数据的本地运行示例
 
-先打开本仓库目录，在安装了Python及依赖的环境中运行：
+以下命令已在课程团队的本地环境中验证，使用另行配置的配套教学数据。`data/internal/train.csv`和`data/internal/validation.csv`不随Git仓库提供。取得配套数据并放入对应路径后，可在已安装Python及依赖的环境中运行；使用自行整理的数据时，请将命令中的输入路径替换为实际路径：
 
 ```bash
 python -m pip install -r requirements.txt
 python src/molecular_baseline.py --train data/internal/train.csv --validation data/internal/validation.csv --output outputs/baseline
 ```
 
-本地目录中的 `data/internal/` 提供基础样本，`examples/internal_historical/` 提供历史案例。两目录按教学使用管理并由Git忽略。阅读教学设计与代码无需完整课题数据；运行相关示例时使用配套示例数据或自行准备符合格式的输入。格式与来源见[数据说明](data/README.md)和[案例说明](examples/README.md)。
+Git仓库提供教学文档、代码、Notebook和数据字段说明，目前未包含分子数据文件及历史结果明细。本地工作目录的 `data/internal/` 和 `examples/internal_historical/` 分别保存配套基础样本与历史案例，均由Git忽略。阅读教学设计与代码无需这些资料；执行相关示例前需另行准备相应输入。格式与来源见[数据说明](data/README.md)和[案例说明](examples/README.md)。
 
 ### 示例数据与公开数据获取
 
-仓库的数据展示以少量示例为主。开展自己的课题时，可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开数据资源检索、下载分子结构和活性数据；PubChem的下载方式见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)，活性记录见[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。
+后续共享数据以经确认的少量示例为主。开展自己的课题时，可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开数据资源检索、下载分子结构和活性数据；PubChem的下载方式见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)，活性记录见[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。
 
 下载后按[数据字段说明](data/README.md)整理SMILES、标签、记录编号与scaffold分组，记录数据来源、下载日期及标签规则，并划分训练与评价数据。公开原始数据与本课题整理后的划分、搜索日志及未发表结果分别管理。
 

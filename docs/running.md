@@ -4,7 +4,7 @@
 
 基础实验使用Python3.12、RDKit、NumPy、SciPy和scikit-learn，依赖版本见 `requirements.txt`；Conda基础环境配置见 `environment.yml`。Notebook另使用 `requirements-notebooks.txt`。图谱已经提供PNG与SVG，`requirements-figures.txt`仅在重新绘图时使用。
 
-在仓库根目录、对应Python环境中执行后续命令。
+本指南记录课程团队使用配套教学数据的本地运行方式。Git仓库目前提供代码和字段说明，不含下表中的数据与历史结果文件；相关示例需先另行准备输入，再在仓库根目录、对应Python环境中执行。
 
 ## 2. 准备输入
 
@@ -17,7 +17,9 @@
 
 本地工作目录已配置这些资料，运行说明记录现有示例的输入与操作方式。仓库以教学展示和方法借鉴为主，公开示例可使用小规模数据；完整课题数据及未发表研究记录保留在本地，不作为共享仓库的必备内容。相关目录由Git忽略。文件格式见[数据说明](../data/README.md)与[案例说明](../examples/README.md)。
 
-## 3. 运行一个基础模型
+## 3. 使用配套教学数据运行基础模型
+
+以下命令以已取得并配置配套数据为前提；自行准备数据时，将训练与验证路径替换为实际路径。
 
 ```bash
 python -m pip install -r requirements.txt
