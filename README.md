@@ -29,37 +29,38 @@
 - **教师**：[教学设计](docs/teacher-guide.md) → [32学时与16次活动](docs/course-schedule.md) → [考核量规](docs/assessment.md)。
 - **学生**：[项目任务书](docs/project-brief.md) → [实践指南](docs/student-guide.md) → 下表中的实践入口。
 
-| 实践入口 | 输入与学习产出 |
-|---|---|
-| [00 分子预测基础实验](notebooks/00_分子预测基础实验.ipynb) | 真实分子样本 → ECFP4＋逻辑回归预测及指标解释 |
-| [01 化学问题与分子表示](notebooks/01_化学问题与分子表示.ipynb) | 分子数据 → 两类图与表示的解释 |
-| [02 GNN与N2V模型比较](notebooks/02_GNN与N2V模型比较.ipynb) | 历史M0/M1结果 → 模型差异与优化问题 |
-| [03 定义模型搜索问题](notebooks/03_定义模型搜索问题.ipynb) | 策略示例与历史提案 → 学生搜索问题卡 |
-| [04 模型评价与科学判断](notebooks/04_模型评价与科学判断.ipynb) | 历史L6搜索与评价记录 → 对照分析和结论依据 |
+| 实践层次 | 公开提供的内容 | 使用条件 |
+|---|---|---|
+| [00 基础分子预测](notebooks/00_分子预测基础实验.ipynb)与[01 分子表示](notebooks/01_化学问题与分子表示.ipynb) | PubChem小样本、ECFP4＋逻辑回归训练评价、分子图读取 | 安装依赖后可运行 |
+| [02 GNN与N2V比较](notebooks/02_GNN与N2V模型比较.ipynb) | 历史结果分析代码与讨论任务 | 历史结果由课程团队另行提供；GNN/N2V训练实现不在本仓库中 |
+| [03 定义模型搜索问题](notebooks/03_定义模型搜索问题.ipynb) | 离线策略检查和搜索问题卡 | 公开部分可运行；真实历史提案为可选材料 |
+| [04 搜索评价与科学判断](notebooks/04_模型评价与科学判断.ipynb) | 历史搜索结果核验方法与讨论任务 | 需另配历史结果；在线搜索需平台账号、额度、接口及评价器 |
 
-00提供无需伐谋账号的基础模型运行；02—04中的模型比较和搜索结果为真实科研案例分析。伐谋在线实践依课程实际账号、额度和接口安排开展，实验记录分别注明执行和资料来源。
+公开基础实验帮助学生理解结构、预测和评价；GNN＋N2V案例用于提出模型融合问题，伐谋实践用于设计与开展模型策略搜索。教师可根据课题资料与平台条件组合这些活动。
 
-## 使用配套教学数据的本地运行示例
+## 运行公开基础示例
 
-以下命令已在课程团队的本地环境中验证，使用另行配置的配套教学数据。`data/internal/train.csv`和`data/internal/validation.csv`不随Git仓库提供。取得配套数据并放入对应路径后，可在已安装Python及依赖的环境中运行；使用自行整理的数据时，请将命令中的输入路径替换为实际路径：
+`data/example/`随仓库提供96条训练记录和32条验证记录，独立取自[PubChem公开活性数据](https://pubchem.ncbi.nlm.nih.gov/bioassay/743139)。在已安装Python及依赖的环境中，于仓库根目录运行：
 
 ```bash
 python -m pip install -r requirements.txt
-python src/molecular_baseline.py --train data/internal/train.csv --validation data/internal/validation.csv --output outputs/baseline
+python src/molecular_baseline.py --train data/example/train.csv --validation data/example/validation.csv --output outputs/public-example
 ```
 
-Git仓库提供教学文档、代码、Notebook和数据字段说明，目前未包含分子数据文件及历史结果明细。本地工作目录的 `data/internal/` 和 `examples/internal_historical/` 分别保存配套基础样本与历史案例，均由Git忽略。阅读教学设计与代码无需这些资料；执行相关示例前需另行准备相应输入。格式与来源见[数据说明](data/README.md)和[案例说明](examples/README.md)。
+结果写入`outputs/public-example/`。此小样本用于演示建模流程，抽样时提高了阳性比例，其指标不能代表完整实验数据的预测性能。来源、标签、划分与哈希见[数据说明](data/README.md)和[source_manifest.json](data/example/source_manifest.json)。已保存的真实运行示例见[参考输出](examples/public_baseline/README.md)。
 
-### 示例数据与公开数据获取
+Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使用公开样本；03的离线配置与问题卡无需账号或历史资料。02、04的历史数据保存在本地`examples/internal_historical/`，不随Git仓库提供；内部课题数据`data/internal/`同样不公开。[运行指南](docs/running.md)逐项说明操作方法。
 
-后续共享数据以经确认的少量示例为主。开展自己的课题时，可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开数据资源检索、下载分子结构和活性数据；PubChem的下载方式见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)，活性记录见[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。
+### 自选课题的数据获取
 
-下载后按[数据字段说明](data/README.md)整理SMILES、标签、记录编号与scaffold分组，记录数据来源、下载日期及标签规则，并划分训练与评价数据。公开原始数据与本课题整理后的划分、搜索日志及未发表结果分别管理。
-
-Notebook另使用 `requirements-notebooks.txt` 中的依赖，在对应Python内核中从上到下执行。[本地运行指南](docs/running.md)列出输入、命令、环境及输出位置。
+可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开资源检索、下载分子结构和活性数据，参见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)和[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。按[字段说明](data/README.md)整理结构、标签、记录编号和scaffold分组，记录来源、下载日期及标签规则，再划分训练与评价数据。程序支持符合格式的自选数据，不要求固定样本数。
 
 ## 研究记录与学习评价
 
 使用[阶段简短记录](templates/stage-process-record.md)、[学期档案](templates/semester-journal.md)、[搜索问题卡](templates/search-problem-card.md)和[方案选择与评价](templates/freeze-and-validation.md)保存过程。教师依据材料开展指导，学生保留反馈采纳、修订或否决及依据。开发评价支持策略迭代，冻结后的保留评价用于检验结论。
 
 课程过程记录可直接使用Markdown日志。[36节点图谱](docs/knowledge-map.md)连接知识、实践与能力；[资源来源](docs/resource-sources.md)列明教学材料和研究案例的来源。
+
+## 许可
+
+原创内容的授权状态及第三方数据、依赖与平台服务的权利范围见[许可说明](LICENSE.md)。

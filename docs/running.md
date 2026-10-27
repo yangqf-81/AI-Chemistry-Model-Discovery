@@ -1,50 +1,45 @@
-# 本地运行指南
+# 运行指南
 
-## 1. 运行环境
+## 1. 环境与公开实验
 
-基础实验使用Python3.12、RDKit、NumPy、SciPy和scikit-learn，依赖版本见 `requirements.txt`；Conda基础环境配置见 `environment.yml`。Notebook另使用 `requirements-notebooks.txt`。图谱已经提供PNG与SVG，`requirements-figures.txt`仅在重新绘图时使用。
+基础实验使用Python3.12、RDKit、NumPy、SciPy与scikit-learn，版本见`requirements.txt`，Conda配置见`environment.yml`。Notebook另用`requirements-notebooks.txt`；图谱已提供PNG与SVG，重新绘图时才需`requirements-figures.txt`。
 
-本指南记录课程团队使用配套教学数据的本地运行方式。Git仓库目前提供代码和字段说明，不含下表中的数据与历史结果文件；相关示例需先另行准备输入，再在仓库根目录、对应Python环境中执行。
-
-## 2. 准备输入
-
-| 路径 | 内容 | 使用环节 |
-|---|---|---|
-| `data/internal/train.csv` | 2,000条真实分子训练样本 | 基础模型训练 |
-| `data/internal/validation.csv` | 1,000条真实分子验证样本 | 基础预测与指标评价 |
-| `data/internal/source_manifest.json` | 来源、抽样规则与输入校验信息 | 核对数据版本 |
-| `examples/internal_historical/` | M0/M1比较、L6提案、评价轨迹及来源索引 | 历史案例分析 |
-
-本地工作目录已配置这些资料，运行说明记录现有示例的输入与操作方式。仓库以教学展示和方法借鉴为主，公开示例可使用小规模数据；完整课题数据及未发表研究记录保留在本地，不作为共享仓库的必备内容。相关目录由Git忽略。文件格式见[数据说明](../data/README.md)与[案例说明](../examples/README.md)。
-
-## 3. 使用配套教学数据运行基础模型
-
-以下命令以已取得并配置配套数据为前提；自行准备数据时，将训练与验证路径替换为实际路径。
+在仓库根目录、安装对应依赖的Python环境中运行：
 
 ```bash
-python -m pip install -r requirements.txt
-python src/molecular_baseline.py --train data/internal/train.csv --validation data/internal/validation.csv --output outputs/baseline
+python src/molecular_baseline.py --train data/example/train.csv --validation data/example/validation.csv --output outputs/public-example
 ```
 
-程序将SMILES转换为ECFP4指纹，训练逻辑回归分类器，对验证样本预测，屏幕显示AP、AUROC及样本信息；输出 `outputs/baseline/metrics.json` 和 `predictions.csv`。该练习无需伐谋账号，帮助学生熟悉真实分子的建模与评价。
+公开数据随仓库提供，来源与标签见[数据说明](../data/README.md)。输出为`metrics.json`与`predictions.csv`；[参考输出](../examples/public_baseline/README.md)来自该样本的实际本地运行。自选数据可替换输入路径，需包含`canonical_smiles`、`label`、`record_id`和`generic_scaffold_id`，不限制固定记录数。
 
-输入应包含 `canonical_smiles`、`label`、`record_id`、`generic_scaffold_id`。程序检查训练与验证之间的记录、分子和scaffold交叉，遇到无效结构、缺少类别等情况给出错误，按原数据与划分核对后再运行。
+## 2. 各Notebook的条件
 
-## 4. 分析真实搜索案例
+| Notebook | 所需输入 | 公开仓库中的操作 |
+|---|---|---|
+| 00 分子预测基础实验 | data/example/train.csv与validation.csv | 运行ECFP4＋逻辑回归、查看指标与输出 |
+| 01 化学问题与分子表示 | data/example/train.csv | 读取公开分子及其原子、键信息 |
+| 02 GNN与N2V模型比较 | 另配的m1_systems.csv与source-index.json | 阅读分析代码与讨论任务；有材料后运行 |
+| 03 定义模型搜索问题 | famou/candidate_example.py | 检查策略与填写问题卡；取得材料后可追加真实提案分析 |
+| 04 模型评价与科学判断 | 另配的完整历史结果表与source-index.json | 阅读核验方法与讨论任务；有材料后运行 |
+
+Notebook在对应Python内核中从上到下执行，工作目录可为仓库根目录或`notebooks/`。02、04所需文件见[案例说明](../examples/README.md)，未随公开仓库提供。它们是历史结果分析入口，不执行GNN/N2V训练或在线搜索。
+
+## 3. 离线配置与在线实践
+
+公开的离线配置准备命令无需平台账号：
 
 ```bash
-python src/historical_case.py
 python famou/prepare_task_example.py famou/candidate_example.py
 ```
 
-第一条命令读取历史M0/M1与L6资料，核对并汇总既有评价记录；第二条命令解析策略配置，显示搜索任务需要定义的字段。它们分别是历史案例分析和本地配置准备，具体在线运行由课程按实际账号、额度与评价器安排。
+课程团队另行提供历史材料后，可用以下命令核验历史结果：
 
-## 5. 使用Notebook
+```bash
+python src/historical_case.py
+```
 
-安装 `requirements-notebooks.txt` 中的依赖，在对应Python内核中打开 `notebooks/`，按00至04顺序从上到下运行。工作目录可为仓库根目录或 `notebooks/`，代码会定位资源根目录。
+伐谋在线搜索需要实际账号、额度、接口与训练评价器，由课程和平台支持条件安排。离线配置、历史分析与平台执行分别记录，不能将其中一个环节的完成视为另一个环节已执行。
 
-每份Notebook开头列明输入、运行方法和预期输出。00为基础模型实验；01读取分子结构；02分析M0/M1历史结果；03定义搜索问题；04分析历史搜索与评价。教学任务和提交物见[学生实践指南](student-guide.md)。
+## 4. 教学使用
 
-## 6. 教学使用
-
-教师按[32学时计划](course-schedule.md)安排基线、比较、搜索设计和评价。学生使用[阶段记录](../templates/stage-process-record.md)保存行动、证据、认识变化和下一步，教师结合材料指导并评定。过程日志可直接采用Markdown，基础实验和案例分析均不依赖个人反馈服务器。
+按[32学时计划](course-schedule.md)组织课题，学生用[阶段记录](../templates/stage-process-record.md)保存行动、证据、认识变化与下一步，教师结合材料指导并评价。过程记录直接使用Markdown，不依赖个人反馈服务器。仓库以教学展示、方法借鉴和示例实践为主，现有环境运行记录不等于新机器安装验证。

@@ -4,6 +4,8 @@
 
 ## 资源与操作
 
+公开可运行内容为策略配置检查与任务准备。下列历史结果文件不随仓库提供，需由课程团队另行配置；在线执行还需平台账号、额度、接口及训练评价器。
+
 - `candidate_example.py`：教师提供的合法策略配置，供理解候选的表达方式。
 - `prepare_task_example.py`：读取配置、检查字段，生成待接入评价器的任务说明。
 - `examples/internal_historical/l6_proposals.csv`：L6真实提案记录。
@@ -12,10 +14,9 @@
 
 ```bash
 python famou/prepare_task_example.py famou/candidate_example.py
-python src/historical_case.py
 ```
 
-任务准备示例在本地运行，输出配置和需要学生设计的字段。在线执行环节由课程与平台安排账号、接口、额度和评价器绑定；历史回放按真实记录组织分析。实验档案分别记载本地执行、平台执行及历史分析。
+另配历史材料后可执行`python src/historical_case.py`进行分析。任务准备示例在本地运行，输出配置和需要学生设计的字段。在线执行环节由课程与平台安排账号、接口、额度和评价器绑定；历史回放按真实记录组织分析。实验档案分别记载本地执行、平台执行及历史分析。
 
 ## 学生的主要工作
 

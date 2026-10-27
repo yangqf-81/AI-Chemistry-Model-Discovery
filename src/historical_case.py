@@ -36,6 +36,8 @@ def policy_literal(source):
 
 def rows(name, directory=None):
     directory = Path(directory) if directory else ROOT/'examples/internal_historical'
+    if not (directory/'source-index.json').is_file() or not (directory/name).is_file():
+        raise FileNotFoundError('Historical case materials are supplied separately by the course team; see examples/README.md. Missing: ' + str(directory/name))
     index = json.loads((directory/'source-index.json').read_text(encoding='utf-8'))
     path = directory/name
     if hashlib.sha256(path.read_bytes()).hexdigest() != index['files'][name]['sha256']:

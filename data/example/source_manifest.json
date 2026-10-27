@@ -1,0 +1,31 @@
+{
+  "dataset": "Public PubChem AID 743139 teaching subset",
+  "assay_name": "qHTS assay to identify aromatase inhibitors: Summary",
+  "assay_url": "https://pubchem.ncbi.nlm.nih.gov/bioassay/743139",
+  "assay_download_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/aid/743139/concise/CSV",
+  "property_api": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{CID_LIST}/property/CanonicalSMILES/JSON",
+  "retrieved_date": "2026-10-27",
+  "labels": {
+    "1": "PubChem Activity Outcome = Active",
+    "0": "PubChem Activity Outcome = Inactive"
+  },
+  "selection": "First 96 unique active and 288 unique inactive CIDs in source order form the downloaded candidate pool. Conflicting active/inactive labels, invalid structures and duplicate canonical structures are removed. No model scores used.",
+  "split_rule": "SHA256(generic Murcko scaffold SMILES), first 8 hex digits modulo 4: 0 for validation, others for train; empty scaffolds share ACYCLIC group.",
+  "teaching_quotas": {
+    "train": {
+      "negative": 72,
+      "positive": 24
+    },
+    "validation": {
+      "negative": 24,
+      "positive": 8
+    }
+  },
+  "scope": "Class-enriched workflow example, not assay population prevalence or research benchmark; unrelated to unpublished project splits and results.",
+  "source_assay_sha256": "c04586288173ac6b69b2ec1e344a88d6917bb729d488dc431798898fcd695ee6",
+  "files": {
+    "train.csv": "7a9fe0274c67ea8bb47c797fda757f20b4b92905f79dda0519e9e67284124199",
+    "validation.csv": "1f9801c51f322a090f09664dc40e7abc66bdf573b4fcd75a673e49415194e123"
+  },
+  "rights": "Public NIH/NCATS assay records accessed through PubChem. Original source terms apply; not relicensed as team-owned data."
+}

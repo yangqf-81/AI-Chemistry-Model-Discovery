@@ -1,0 +1,21 @@
+{
+  "model": "ECFP4-2048 + balanced logistic regression",
+  "purpose": "Foundation molecular activity prediction exercise",
+  "train_rows": 96,
+  "validation_rows": 32,
+  "train_positive": 24,
+  "validation_positive": 8,
+  "validation_prevalence": 0.25,
+  "AP": 0.4061820063993977,
+  "AUROC": 0.5729166666666666,
+  "input_sha256": {
+    "train": "7a9fe0274c67ea8bb47c797fda757f20b4b92905f79dda0519e9e67284124199",
+    "validation": "1f9801c51f322a090f09664dc40e7abc66bdf573b4fcd75a673e49415194e123"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "rdkit": "2024.03.2",
+    "numpy": "1.26.4",
+    "scikit_learn": "1.6.1"
+  }
+}
