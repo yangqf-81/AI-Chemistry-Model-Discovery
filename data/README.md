@@ -18,3 +18,9 @@
 共享示例用于展示字段格式、分子表示和预测评价方法，可选取少量获准公开的数据。上述本地样本来自尚未发表的研究，与完整课题资料一并保存在Git忽略目录中，按课程授权范围使用。
 
 资料来源与共享安排见资源来源说明；教学数据与代码按各自来源分别管理。
+
+## 自行获取数据
+
+可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开资源选择适合教学问题的数据。PubChem提供分子及BioAssay记录的检索与下载，参见[下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)和[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。
+
+选择任务时先阅读实验说明，明确活性标签的含义；将结构和活性记录按标识关联，整理为上表字段，记录来源、下载日期、清理规则及标签定义。`generic_scaffold_id`需根据分子结构生成；划分训练与评价数据后，再使用基础脚本检查记录、分子和scaffold交叉。公开原始数据可用于自选课题，不等同于本课题已有划分或历史模型结果。

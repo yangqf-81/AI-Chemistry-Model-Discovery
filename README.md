@@ -50,6 +50,12 @@ python src/molecular_baseline.py --train data/internal/train.csv --validation da
 
 本地目录中的 `data/internal/` 提供基础样本，`examples/internal_historical/` 提供历史案例。两目录按教学使用管理并由Git忽略。阅读教学设计与代码无需完整课题数据；运行相关示例时使用配套示例数据或自行准备符合格式的输入。格式与来源见[数据说明](data/README.md)和[案例说明](examples/README.md)。
 
+### 示例数据与公开数据获取
+
+仓库的数据展示以少量示例为主。开展自己的课题时，可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开数据资源检索、下载分子结构和活性数据；PubChem的下载方式见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)，活性记录见[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。
+
+下载后按[数据字段说明](data/README.md)整理SMILES、标签、记录编号与scaffold分组，记录数据来源、下载日期及标签规则，并划分训练与评价数据。公开原始数据与本课题整理后的划分、搜索日志及未发表结果分别管理。
+
 Notebook另使用 `requirements-notebooks.txt` 中的依赖，在对应Python内核中从上到下执行。[本地运行指南](docs/running.md)列出输入、命令、环境及输出位置。
 
 ## 研究记录与学习评价
