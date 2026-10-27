@@ -16,3 +16,4 @@ outputs/
 *.tar.gz
 site/
 .DS_Store
+examples/internal_historical/

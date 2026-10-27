@@ -1,7 +1,17 @@
-# 真实结果与案例选编
+# 模型比较与搜索案例
 
-本地基础程序生成的真实输出放在 `outputs/`，由验收说明记录。它们属于基础技术实验，不是学生成果，也不是GNN/N2V或L6科研复现。
+案例来自GNN＋N2V项目的L6研究记录，包括M0/M1比较、伐谋候选提案、开发评价轨迹与方案确认。基础程序的实际运行结果另由 `outputs/baseline/` 保存。
 
-L6原始证据保存在本仓库外部的 `来源材料/关键证据/`。公开版拟精选M0/M1比较、伐谋候选提案与反馈、候选选择及验证材料；确认发布范围后再加入本目录。原始科研ZIP和内部部署记录不整体上传。
+| 文件 | 内容 |
+|---|---|
+| `internal_historical/m1_systems.csv` | 26体系M0/M1及L6比较 |
+| `internal_historical/l6_proposals.csv` | 30条原始提案记录及状态 |
+| `internal_historical/l6_trajectory.csv` | 20个评价候选的反馈轨迹 |
+| `internal_historical/l6_system_metrics.csv` | 520个候选×体系评价记录 |
+| `internal_historical/l6_top5.csv` | 五个候选的确认比较 |
+| `internal_historical/validation5.csv` | 五个选择留出体系的评价案例 |
+| `internal_historical/source-index.json` | 原包成员与文件校验信息 |
 
-所有示例标明“历史研究结果”“本次技术运行”或“学生实际运行”，避免混淆来源和实施状态。
+运行 `python src/historical_case.py` 可读取案例并核对评价轨迹。Notebook按课程阶段组织问题提出、搜索设计和评价讨论。
+
+资料均标注为历史研究。Validation5相对L6搜索和选择留出，研究历史暴露及体系内部评价安排随案例说明保留。学生据此学习如何说明评价范围，并为本组实验设计适当对照和验证。

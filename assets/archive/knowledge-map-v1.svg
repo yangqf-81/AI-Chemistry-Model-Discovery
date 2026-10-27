@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1273" viewBox="0 0 1800 1273" role="img" aria-labelledby="title desc">
+<title id="title">AI辅助模型开发与优化：36节点知识与能力图谱</title>
+<desc id="desc">从化学任务、分子表征、模型比较、搜索设计、人机协同走向科学判断。连线表示学习推进，不表示化学因果关系。</desc>
+<rect width="1800" height="1273" fill="white"/>
+<text x="900" y="66" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" fill="#243344">AI辅助模型开发与优化</text>
+<text x="900" y="119" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="#243344">面向化学分子活性预测的项目制实践 · 知识／能力图谱</text>
+<rect x="48" y="172" width="552" height="58" rx="14" fill="#F4F7FA" stroke="#F4F7FA" stroke-width="2"/>
+<text x="324" y="201" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" fill="#243344">问题驱动：从模型差异中提问</text>
+<rect x="624" y="172" width="552" height="58" rx="14" fill="#F4F7FA" stroke="#F4F7FA" stroke-width="2"/>
+<text x="900" y="201" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" fill="#243344">人机协同：人定边界，AI提案</text>
+<rect x="1200" y="172" width="552" height="58" rx="14" fill="#F4F7FA" stroke="#F4F7FA" stroke-width="2"/>
+<text x="1476" y="201" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" fill="#243344">证据导向：用对照与验证判断</text>
+<rect x="48" y="274" width="264" height="66" rx="14" fill="#235A91" stroke="#235A91" stroke-width="2"/>
+<text x="180" y="307" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="white">化学任务</text>
+<line x1="315" y1="307" x2="330" y2="307" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="322,302 322,312 330,307" fill="#B2BFCC"/>
+<rect x="48" y="376" width="264" height="68" rx="14" fill="#EAF2FB" stroke="#EAF2FB" stroke-width="2"/>
+<text x="180" y="410" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#235A91">01  活性预测问题</text>
+<line x1="180" y1="448" x2="180" y2="464" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="175,456 185,456 180,464" fill="#B2BFCC"/>
+<rect x="48" y="468" width="264" height="68" rx="14" fill="#EAF2FB" stroke="#EAF2FB" stroke-width="2"/>
+<text x="180" y="502" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#235A91">02  实验与标签含义</text>
+<line x1="180" y1="540" x2="180" y2="556" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="175,548 185,548 180,556" fill="#B2BFCC"/>
+<rect x="48" y="560" width="264" height="68" rx="14" fill="#EAF2FB" stroke="#EAF2FB" stroke-width="2"/>
+<text x="180" y="594" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#235A91">03  SMILES结构表达</text>
+<line x1="180" y1="632" x2="180" y2="648" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="175,640 185,640 180,648" fill="#B2BFCC"/>
+<rect x="48" y="652" width="264" height="68" rx="14" fill="#EAF2FB" stroke="#EAF2FB" stroke-width="2"/>
+<text x="180" y="686" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#235A91">04  数据质量检查</text>
+<line x1="180" y1="724" x2="180" y2="740" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="175,732 185,732 180,740" fill="#B2BFCC"/>
+<rect x="48" y="744" width="264" height="68" rx="14" fill="#EAF2FB" stroke="#EAF2FB" stroke-width="2"/>
+<text x="180" y="778" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#235A91">05  类别不平衡</text>
+<line x1="180" y1="816" x2="180" y2="832" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="175,824 185,824 180,832" fill="#B2BFCC"/>
+<rect x="48" y="836" width="264" height="68" rx="14" fill="#EAF2FB" stroke="#EAF2FB" stroke-width="2"/>
+<text x="180" y="870" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#235A91">06  训练与验证划分</text>
+<rect x="336" y="274" width="264" height="66" rx="14" fill="#25705C" stroke="#25705C" stroke-width="2"/>
+<text x="468" y="307" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="white">分子表征</text>
+<line x1="603" y1="307" x2="618" y2="307" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="610,302 610,312 618,307" fill="#B2BFCC"/>
+<rect x="336" y="376" width="264" height="68" rx="14" fill="#EAF6F1" stroke="#EAF6F1" stroke-width="2"/>
+<text x="468" y="410" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#25705C">07  原子与化学键</text>
+<line x1="468" y1="448" x2="468" y2="464" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="463,456 473,456 468,464" fill="#B2BFCC"/>
+<rect x="336" y="468" width="264" height="68" rx="14" fill="#EAF6F1" stroke="#EAF6F1" stroke-width="2"/>
+<text x="468" y="502" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#25705C">08  分子图结构</text>
+<line x1="468" y1="540" x2="468" y2="556" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="463,548 473,548 468,556" fill="#B2BFCC"/>
+<rect x="336" y="560" width="264" height="68" rx="14" fill="#EAF6F1" stroke="#EAF6F1" stroke-width="2"/>
+<text x="468" y="594" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#25705C">09  GNN分子表示</text>
+<line x1="468" y1="632" x2="468" y2="648" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="463,640 473,640 468,648" fill="#B2BFCC"/>
+<rect x="336" y="652" width="264" height="68" rx="14" fill="#EAF6F1" stroke="#EAF6F1" stroke-width="2"/>
+<text x="468" y="686" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#25705C">10  独立分子模型M0</text>
+<line x1="468" y1="724" x2="468" y2="740" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="463,732 473,732 468,740" fill="#B2BFCC"/>
+<rect x="336" y="744" width="264" height="68" rx="14" fill="#EAF6F1" stroke="#EAF6F1" stroke-width="2"/>
+<text x="468" y="778" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#25705C">11  指纹与分子相似性</text>
+<line x1="468" y1="816" x2="468" y2="832" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="463,824 473,824 468,832" fill="#B2BFCC"/>
+<rect x="336" y="836" width="264" height="68" rx="14" fill="#EAF6F1" stroke="#EAF6F1" stroke-width="2"/>
+<text x="468" y="870" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#25705C">12  N2V参考信息</text>
+<rect x="624" y="274" width="264" height="66" rx="14" fill="#655099" stroke="#655099" stroke-width="2"/>
+<text x="756" y="307" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="white">比较与提问</text>
+<line x1="891" y1="307" x2="906" y2="307" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="898,302 898,312 906,307" fill="#B2BFCC"/>
+<rect x="624" y="376" width="264" height="68" rx="14" fill="#F1EEFB" stroke="#F1EEFB" stroke-width="2"/>
+<text x="756" y="410" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#655099">13  融合模型M1</text>
+<line x1="756" y1="448" x2="756" y2="464" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="751,456 761,456 756,464" fill="#B2BFCC"/>
+<rect x="624" y="468" width="264" height="68" rx="14" fill="#F1EEFB" stroke="#F1EEFB" stroke-width="2"/>
+<text x="756" y="502" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#655099">14  模型预测结果</text>
+<line x1="756" y1="540" x2="756" y2="556" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="751,548 761,548 756,556" fill="#B2BFCC"/>
+<rect x="624" y="560" width="264" height="68" rx="14" fill="#F1EEFB" stroke="#F1EEFB" stroke-width="2"/>
+<text x="756" y="594" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#655099">15  AP与AUROC</text>
+<line x1="756" y1="632" x2="756" y2="648" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="751,640 761,640 756,648" fill="#B2BFCC"/>
+<rect x="624" y="652" width="264" height="68" rx="14" fill="#F1EEFB" stroke="#F1EEFB" stroke-width="2"/>
+<text x="756" y="686" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#655099">16  基线对照比较</text>
+<line x1="756" y1="724" x2="756" y2="740" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="751,732 761,732 756,740" fill="#B2BFCC"/>
+<rect x="624" y="744" width="264" height="68" rx="14" fill="#F1EEFB" stroke="#F1EEFB" stroke-width="2"/>
+<text x="756" y="778" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#655099">17  收益与异常观察</text>
+<line x1="756" y1="816" x2="756" y2="832" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="751,824 761,824 756,832" fill="#B2BFCC"/>
+<rect x="624" y="836" width="264" height="68" rx="14" fill="#F1EEFB" stroke="#F1EEFB" stroke-width="2"/>
+<text x="756" y="870" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#655099">18  提出优化问题</text>
+<rect x="912" y="274" width="264" height="66" rx="14" fill="#9A6329" stroke="#9A6329" stroke-width="2"/>
+<text x="1044" y="307" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="white">设计搜索</text>
+<line x1="1179" y1="307" x2="1194" y2="307" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1186,302 1186,312 1194,307" fill="#B2BFCC"/>
+<rect x="912" y="376" width="264" height="68" rx="14" fill="#FFF3E6" stroke="#FFF3E6" stroke-width="2"/>
+<text x="1044" y="410" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#9A6329">19  候选模型策略</text>
+<line x1="1044" y1="448" x2="1044" y2="464" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1039,456 1049,456 1044,464" fill="#B2BFCC"/>
+<rect x="912" y="468" width="264" height="68" rx="14" fill="#FFF3E6" stroke="#FFF3E6" stroke-width="2"/>
+<text x="1044" y="502" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#9A6329">20  可改变的范围</text>
+<line x1="1044" y1="540" x2="1044" y2="556" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1039,548 1049,548 1044,556" fill="#B2BFCC"/>
+<rect x="912" y="560" width="264" height="68" rx="14" fill="#FFF3E6" stroke="#FFF3E6" stroke-width="2"/>
+<text x="1044" y="594" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#9A6329">21  保持不变的条件</text>
+<line x1="1044" y1="632" x2="1044" y2="648" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1039,640 1049,640 1044,648" fill="#B2BFCC"/>
+<rect x="912" y="652" width="264" height="68" rx="14" fill="#FFF3E6" stroke="#FFF3E6" stroke-width="2"/>
+<text x="1044" y="686" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#9A6329">22  评价目标设计</text>
+<line x1="1044" y1="724" x2="1044" y2="740" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1039,732 1049,732 1044,740" fill="#B2BFCC"/>
+<rect x="912" y="744" width="264" height="68" rx="14" fill="#FFF3E6" stroke="#FFF3E6" stroke-width="2"/>
+<text x="1044" y="778" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#9A6329">23  资源与候选预算</text>
+<line x1="1044" y1="816" x2="1044" y2="832" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1039,824 1049,824 1044,832" fill="#B2BFCC"/>
+<rect x="912" y="836" width="264" height="68" rx="14" fill="#FFF3E6" stroke="#FFF3E6" stroke-width="2"/>
+<text x="1044" y="870" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#9A6329">24  停止规则</text>
+<rect x="1200" y="274" width="264" height="66" rx="14" fill="#256E82" stroke="#256E82" stroke-width="2"/>
+<text x="1332" y="307" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="white">人机协同</text>
+<line x1="1467" y1="307" x2="1482" y2="307" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1474,302 1474,312 1482,307" fill="#B2BFCC"/>
+<rect x="1200" y="376" width="264" height="68" rx="14" fill="#E9F5F8" stroke="#E9F5F8" stroke-width="2"/>
+<text x="1332" y="410" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#256E82">25  伐谋候选提案</text>
+<line x1="1332" y1="448" x2="1332" y2="464" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1327,456 1337,456 1332,464" fill="#B2BFCC"/>
+<rect x="1200" y="468" width="264" height="68" rx="14" fill="#E9F5F8" stroke="#E9F5F8" stroke-width="2"/>
+<text x="1332" y="502" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#256E82">26  策略可用性检查</text>
+<line x1="1332" y1="540" x2="1332" y2="556" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1327,548 1337,548 1332,556" fill="#B2BFCC"/>
+<rect x="1200" y="560" width="264" height="68" rx="14" fill="#E9F5F8" stroke="#E9F5F8" stroke-width="2"/>
+<text x="1332" y="594" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#256E82">27  程序训练模型</text>
+<line x1="1332" y1="632" x2="1332" y2="648" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1327,640 1337,640 1332,648" fill="#B2BFCC"/>
+<rect x="1200" y="652" width="264" height="68" rx="14" fill="#E9F5F8" stroke="#E9F5F8" stroke-width="2"/>
+<text x="1332" y="686" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#256E82">28  指标评价与反馈</text>
+<line x1="1332" y1="724" x2="1332" y2="740" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1327,732 1337,732 1332,740" fill="#B2BFCC"/>
+<rect x="1200" y="744" width="264" height="68" rx="14" fill="#E9F5F8" stroke="#E9F5F8" stroke-width="2"/>
+<text x="1332" y="778" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#256E82">29  记录候选与失败</text>
+<line x1="1332" y1="816" x2="1332" y2="832" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1327,824 1337,824 1332,832" fill="#B2BFCC"/>
+<rect x="1200" y="836" width="264" height="68" rx="14" fill="#E9F5F8" stroke="#E9F5F8" stroke-width="2"/>
+<text x="1332" y="870" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#256E82">30  人工选择方案</text>
+<rect x="1488" y="274" width="264" height="66" rx="14" fill="#965760" stroke="#965760" stroke-width="2"/>
+<text x="1620" y="307" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" fill="white">科学判断</text>
+<rect x="1488" y="376" width="264" height="68" rx="14" fill="#FAEEEF" stroke="#FAEEEF" stroke-width="2"/>
+<text x="1620" y="410" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#965760">31  选择后保留评价</text>
+<line x1="1620" y1="448" x2="1620" y2="464" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1615,456 1625,456 1620,464" fill="#B2BFCC"/>
+<rect x="1488" y="468" width="264" height="68" rx="14" fill="#FAEEEF" stroke="#FAEEEF" stroke-width="2"/>
+<text x="1620" y="502" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#965760">32  对照与异常分析</text>
+<line x1="1620" y1="540" x2="1620" y2="556" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1615,548 1625,548 1620,556" fill="#B2BFCC"/>
+<rect x="1488" y="560" width="264" height="68" rx="14" fill="#FAEEEF" stroke="#FAEEEF" stroke-width="2"/>
+<text x="1620" y="594" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#965760">33  结论的证据范围</text>
+<line x1="1620" y1="632" x2="1620" y2="648" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1615,640 1625,640 1620,648" fill="#B2BFCC"/>
+<rect x="1488" y="652" width="264" height="68" rx="14" fill="#FAEEEF" stroke="#FAEEEF" stroke-width="2"/>
+<text x="1620" y="686" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#965760">34  提出后续验证</text>
+<line x1="1620" y1="724" x2="1620" y2="740" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1615,732 1625,732 1620,740" fill="#B2BFCC"/>
+<rect x="1488" y="744" width="264" height="68" rx="14" fill="#FAEEEF" stroke="#FAEEEF" stroke-width="2"/>
+<text x="1620" y="778" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#965760">35  代码与结果版本</text>
+<line x1="1620" y1="816" x2="1620" y2="832" stroke="#B2BFCC" stroke-width="3"/>
+<polygon points="1615,824 1625,824 1620,832" fill="#B2BFCC"/>
+<rect x="1488" y="836" width="264" height="68" rx="14" fill="#FAEEEF" stroke="#FAEEEF" stroke-width="2"/>
+<text x="1620" y="870" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#965760">36  报告与个人答辩</text>
+<rect x="48" y="968" width="1704" height="94" rx="14" fill="#F4F7FA" stroke="#F4F7FA" stroke-width="2"/>
+<text x="900" y="998" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" fill="#243344">学习产出：问题说明 → 模型比较 → 搜索问题卡 → 候选记录 → 科学评价</text>
+<text x="900" y="1033" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#58697A">反馈用于开发探索；方案选定后的保留评价不回流调参</text>
+<text x="900" y="1124" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" fill="#58697A">教师拓展：ContextOff机制诊断、完整搜索审计、多seed与跨体系统计</text>
+<text x="900" y="1170" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" fill="#58697A">32学时完整课程 · 以一个实际化学课题贯穿，不要求复做31体系</text>
+<text x="900" y="1214" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#7C8997">36个节点 · 连线表示学习推进，不表示化学因果 · 教学内容方案 v1.1</text>
+</svg>
