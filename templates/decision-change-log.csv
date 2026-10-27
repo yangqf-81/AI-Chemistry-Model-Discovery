@@ -1,1 +1,1 @@
-date,checkpoint,original_question,original_judgment,new_evidence,revised_judgment,reason,teacher_feedback,student_response,version
+date,checkpoint,completed_action,evidence_reference,original_judgment,current_judgment,reason,next_action,feedback_source,feedback_content,student_disposition,disposition_reason,verification_result,actual_revision,version

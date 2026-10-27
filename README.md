@@ -17,7 +17,7 @@
 | 学生任务 | [项目任务书](docs/project-brief.md)与[实践指南](docs/student-guide.md) |
 | 知识与能力关系 | [图谱及关系说明](docs/knowledge-map.md) |
 | 学习评价 | [考核量规](docs/assessment.md) |
-| 研究过程记录 | [学期档案](templates/semester-journal.md)、[搜索问题卡](templates/search-problem-card.md)、[方案选择与评价](templates/freeze-and-validation.md) |
+| 研究过程记录 | [阶段简短记录](templates/stage-process-record.md)、[学期档案](templates/semester-journal.md)、[搜索问题卡](templates/search-problem-card.md)、[方案选择与评价](templates/freeze-and-validation.md) |
 
 ## 分阶段实践
 
