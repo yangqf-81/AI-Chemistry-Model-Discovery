@@ -17,10 +17,10 @@ python src/molecular_baseline.py --train data/example/train.csv --validation dat
 | Notebook | 所需输入 | 公开仓库中的操作 |
 |---|---|---|
 | 00 分子预测基础实验 | data/example/train.csv与validation.csv | 运行ECFP4＋逻辑回归、查看指标与输出 |
-| 01 化学问题与分子表示 | data/example/train.csv | 读取公开分子及其原子、键信息 |
-| 02 GNN与N2V模型比较 | 另配的m1_systems.csv与source-index.json | 阅读分析代码与讨论任务；有材料后运行 |
-| 03 定义模型搜索问题 | famou/candidate_example.py | 检查策略与填写问题卡；取得材料后可追加真实提案分析 |
-| 04 模型评价与科学判断 | 另配的完整历史结果表与source-index.json | 阅读核验方法与讨论任务；有材料后运行 |
+| 01 化学问题与分子信息表征 | data/example/train.csv | 读取公开分子及其原子、键信息 |
+| 02 活性预测比较与问题发现 | 另配的m1_systems.csv与source-index.json | 阅读分析代码与讨论任务；有材料后运行 |
+| 03 预测模型优化策略设计 | famou/candidate_example.py | 检查策略与填写问题卡；取得材料后可追加真实提案分析 |
+| 04 预测结果验证与科学判断 | 另配的完整历史结果表与source-index.json | 阅读核验方法与讨论任务；有材料后运行 |
 
 Notebook在对应Python内核中从上到下执行，工作目录可为仓库根目录或`notebooks/`。02、04所需文件见[案例说明](../examples/README.md)，未随公开仓库提供。它们是历史结果分析入口，不执行GNN/N2V训练或在线搜索。
 
