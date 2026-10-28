@@ -24,6 +24,8 @@ python src/molecular_baseline.py --train data/example/train.csv --validation dat
 
 Notebook在对应Python内核中从上到下执行，工作目录可为仓库根目录或`notebooks/`。02、04所需文件见[案例说明](../examples/README.md)，未随公开仓库提供。它们是历史结果分析入口，不执行GNN/N2V训练或在线搜索。
 
+无需历史数据即可阅读[真实模型开发案例节选](../examples/real-model-development-case.md)并完成讨论。该页不作为02、04的数据输入，不执行训练或在线搜索。
+
 ## 3. 离线配置与在线实践
 
 公开的离线配置准备命令无需平台账号：
