@@ -26,7 +26,7 @@
 
 ## 从哪里开始
 
-- **教师**：[教学设计](docs/teacher-guide.md) → [32学时与16次活动](docs/course-schedule.md) → [考核量规](docs/assessment.md)与[知识／能力图谱](docs/knowledge-map.md)。
+- **教师**：[教学设计](docs/teacher-guide.md) → [32学时与16次活动](docs/course-schedule.md) → [考核量规](docs/assessment.md)。
 - **学生**：[项目任务书](docs/project-brief.md) → [实践指南](docs/student-guide.md) → [公开基础实验](notebooks/00_分子预测基础实验.ipynb)。
 
 可先完成00、01的公开基础实验，再按课题条件开展模型比较与搜索设计。
@@ -61,7 +61,7 @@ Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使�
 
 使用[阶段简短记录](templates/stage-process-record.md)、[学期档案](templates/semester-journal.md)、[搜索问题卡](templates/search-problem-card.md)和[方案选择与评价](templates/freeze-and-validation.md)保存过程。教师依据材料开展指导，学生保留反馈采纳、修订或否决及依据。开发评价支持策略迭代，冻结后的保留评价用于检验结论。
 
-课程过程记录可直接使用Markdown日志。[36节点图谱](docs/knowledge-map.md)连接知识、实践与能力；[资源来源](docs/resource-sources.md)列明教学材料和研究案例的来源。
+课程过程记录可直接使用Markdown日志。知识内容与能力递进见[教师教学设计](docs/teacher-guide.md)，教学材料和研究案例的来源见[资源来源](docs/resource-sources.md)。
 
 ## 数据来源与许可
 
@@ -71,4 +71,4 @@ Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使�
 
 ### 使用许可
 
-原创代码采用[MIT License](licenses/MIT.md)，原创教学文档、图谱与模板采用[CC BY 4.0](licenses/CC-BY-4.0.md)。公开数据、第三方依赖和百度平台服务分别遵循原有条款，适用范围见[许可说明](LICENSE.md)。
+原创代码采用[MIT License](licenses/MIT.md)，原创教学文档与模板采用[CC BY 4.0](licenses/CC-BY-4.0.md)。公开数据、第三方依赖和百度平台服务分别遵循原有条款，适用范围见[许可说明](LICENSE.md)。

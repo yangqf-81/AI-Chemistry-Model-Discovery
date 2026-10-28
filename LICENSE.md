@@ -5,7 +5,7 @@
 | 内容 | 许可 |
 |---|---|
 | src/、famou/、tests/中的原创代码，Notebook代码单元及原创运行配置 | [MIT License](licenses/MIT.md) |
-| 原创说明与教学文档（包括各目录README）、图谱及可编辑源、教学模板、Notebook教学文字 | [CC BY 4.0](licenses/CC-BY-4.0.md) |
+| 原创说明与教学文档（包括各目录README）、教学模板、Notebook教学文字 | [CC BY 4.0](licenses/CC-BY-4.0.md) |
 
 Copyright © 2026 AI-Chemistry-Model-Discovery contributors.
 
