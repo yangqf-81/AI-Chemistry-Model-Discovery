@@ -2,7 +2,7 @@
 
 ## 1. 环境与公开实验
 
-基础实验使用Python3.12、RDKit、NumPy、SciPy与scikit-learn，版本见`requirements.txt`，Conda配置见`environment.yml`。Notebook另用`requirements-notebooks.txt`；图谱已提供PNG与SVG，重新绘图时才需`requirements-figures.txt`。
+基础实验使用Python3.12、RDKit、NumPy、SciPy与scikit-learn，版本见`requirements.txt`，Conda配置见`environment.yml`。Notebook另用`requirements-notebooks.txt`。
 
 在仓库根目录、安装对应依赖的Python环境中运行：
 
@@ -42,4 +42,4 @@ python src/historical_case.py
 
 ## 4. 教学使用
 
-按[32学时计划](course-schedule.md)组织课题，学生用[阶段记录](../templates/stage-process-record.md)保存行动、证据、认识变化与下一步，教师结合材料指导并评价。过程记录直接使用Markdown，不依赖个人反馈服务器。仓库以教学展示、方法借鉴和示例实践为主，现有环境运行记录不等于新机器安装验证。
+按[32学时计划](course-schedule.md)组织课题，学生用[阶段记录](../templates/stage-process-record.md)保存行动、证据、认识变化与下一步，教师结合材料指导并评价。过程记录直接使用Markdown，不依赖个人反馈服务器。

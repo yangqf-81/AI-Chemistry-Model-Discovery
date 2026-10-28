@@ -6,7 +6,7 @@
 
 本资源来自四川大学《化学人工智能实践》课程，面向具备Python、基础机器学习和基本化学结构知识的高年级本科生。课程采用32学时学期制分组实践，各组围绕自己的课题持续开展研究。本资源展示GNN＋Node2Vec与百度伐谋课题小组的完整实施方案。
 
-仓库以教学方案展示、方法借鉴和示例实践为主，提供已在现有环境验证的代码与运行说明。共享资料可选用少量获准公开的示例数据，完整课题数据及未发表研究记录保留在本地。
+仓库提供教学方案、公开小样本、实践代码和参考输出，供教师与学生学习、借鉴和改编。完整课题数据及未发表研究记录保留在本地。
 
 ## 学生怎样开展一个学期的实践
 
@@ -26,17 +26,10 @@
 
 ## 从哪里开始
 
-- **教师**：[教学设计](docs/teacher-guide.md) → [32学时与16次活动](docs/course-schedule.md) → [考核量规](docs/assessment.md)。
-- **学生**：[项目任务书](docs/project-brief.md) → [实践指南](docs/student-guide.md) → 下表中的实践入口。
+- **教师**：[教学设计](docs/teacher-guide.md) → [32学时与16次活动](docs/course-schedule.md) → [考核量规](docs/assessment.md)与[知识／能力图谱](docs/knowledge-map.md)。
+- **学生**：[项目任务书](docs/project-brief.md) → [实践指南](docs/student-guide.md) → [公开基础实验](notebooks/00_分子预测基础实验.ipynb)。
 
-| 实践层次 | 公开提供的内容 | 使用条件 |
-|---|---|---|
-| [00 基础分子预测](notebooks/00_分子预测基础实验.ipynb)与[01 分子表示](notebooks/01_化学问题与分子表示.ipynb) | PubChem小样本、ECFP4＋逻辑回归训练评价、分子图读取 | 安装依赖后可运行 |
-| [02 GNN与N2V比较](notebooks/02_GNN与N2V模型比较.ipynb) | 历史结果分析代码与讨论任务 | 历史结果由课程团队另行提供；GNN/N2V训练实现不在本仓库中 |
-| [03 定义模型搜索问题](notebooks/03_定义模型搜索问题.ipynb) | 离线策略检查和搜索问题卡 | 公开部分可运行；真实历史提案为可选材料 |
-| [04 搜索评价与科学判断](notebooks/04_模型评价与科学判断.ipynb) | 历史搜索结果核验方法与讨论任务 | 需另配历史结果；在线搜索需平台账号、额度、接口及评价器 |
-
-公开基础实验帮助学生理解结构、预测和评价；GNN＋N2V案例用于提出模型融合问题，伐谋实践用于设计与开展模型策略搜索。教师可根据课题资料与平台条件组合这些活动。
+可先完成00、01的公开基础实验，再按课题条件开展模型比较与搜索设计。
 
 ## 运行公开基础示例
 
@@ -49,11 +42,20 @@ python src/molecular_baseline.py --train data/example/train.csv --validation dat
 
 结果写入`outputs/public-example/`。此小样本用于演示建模流程，抽样时提高了阳性比例，其指标不能代表完整实验数据的预测性能。来源、标签、划分与哈希见[数据说明](data/README.md)和[source_manifest.json](data/example/source_manifest.json)。已保存的真实运行示例见[参考输出](examples/public_baseline/README.md)。
 
-Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使用公开样本；03的离线配置与问题卡无需账号或历史资料。02、04的历史数据保存在本地`examples/internal_historical/`，不随Git仓库提供；内部课题数据`data/internal/`同样不公开。[运行指南](docs/running.md)逐项说明操作方法。
+Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使用公开样本；[运行指南](docs/running.md)逐项说明操作方法。
 
-### 自选课题的数据获取
+## GNN＋N2V与百度伐谋进阶实践
 
-可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开资源检索、下载分子结构和活性数据，参见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)和[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。按[字段说明](data/README.md)整理结构、标签、记录编号和scaffold分组，记录来源、下载日期及标签规则，再划分训练与评价数据。程序支持符合格式的自选数据，不要求固定样本数。
+| 实践层次 | 公开提供的内容 | 使用条件 |
+|---|---|---|
+| [00 基础分子预测](notebooks/00_分子预测基础实验.ipynb)与[01 分子表示](notebooks/01_化学问题与分子表示.ipynb) | PubChem小样本、ECFP4＋逻辑回归训练评价、分子图读取 | 安装依赖后可运行 |
+| [02 GNN与N2V比较](notebooks/02_GNN与N2V模型比较.ipynb) | 历史结果分析代码与讨论任务 | 历史结果由课程团队另行提供；GNN/N2V训练实现不在本仓库中 |
+| [03 定义模型搜索问题](notebooks/03_定义模型搜索问题.ipynb) | 离线策略检查和搜索问题卡 | 公开部分可运行；真实历史提案为可选材料 |
+| [04 搜索评价与科学判断](notebooks/04_模型评价与科学判断.ipynb) | 历史搜索结果核验方法与讨论任务 | 需另配历史结果；在线搜索需平台账号、额度、接口及评价器 |
+
+公开基础实验帮助学生理解结构、预测和评价；GNN＋N2V案例用于提出模型融合问题，伐谋实践用于设计与开展模型策略搜索。教师可根据课题资料与平台条件组合这些活动。
+
+03的离线配置与问题卡无需账号或历史资料。02、04的历史数据位于`examples/internal_historical/`，由课程团队另行提供；本地课题数据`data/internal/`不随仓库公开。
 
 ## 研究记录与学习评价
 
@@ -61,6 +63,12 @@ Notebook另需安装`requirements-notebooks.txt`中的依赖。00、01默认使�
 
 课程过程记录可直接使用Markdown日志。[36节点图谱](docs/knowledge-map.md)连接知识、实践与能力；[资源来源](docs/resource-sources.md)列明教学材料和研究案例的来源。
 
-## 许可
+## 数据来源与许可
+
+### 自选课题的数据获取
+
+可从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)或其他公开资源检索、下载分子结构和活性数据，参见[官方数据下载说明](https://pubchem.ncbi.nlm.nih.gov/docs/downloads)和[BioAssay说明](https://pubchem.ncbi.nlm.nih.gov/docs/bioassays)。按[字段说明](data/README.md)整理结构、标签、记录编号和scaffold分组，记录来源、下载日期及标签规则，再划分训练与评价数据。程序支持符合格式的自选数据，不要求固定样本数。
+
+### 使用许可
 
 原创代码采用[MIT License](licenses/MIT.md)，原创教学文档、图谱与模板采用[CC BY 4.0](licenses/CC-BY-4.0.md)。公开数据、第三方依赖和百度平台服务分别遵循原有条款，适用范围见[许可说明](LICENSE.md)。
